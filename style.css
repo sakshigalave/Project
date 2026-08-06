@@ -1,0 +1,653 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+
+body{
+    background:#0B1120;
+    margin:0;
+    padding:0;
+    color:white;
+    font-family:Arial, sans-serif;
+
+
+     overflow-x:hidden;
+}
+
+.dashboard{
+    background:#111827;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.4);
+}
+
+.sidebar{
+    background:#1E293B;
+    border-radius:20px;
+    padding:25px;
+    min-height:100vh;
+}
+
+.sidebar h4{
+    font-weight:bold;
+    margin-bottom:30px;
+    color:white;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    padding:14px;
+    margin-bottom:12px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    color:#d1d5db;
+    font-size:18px;
+}
+
+/*.sidebar li:hover{
+    background:#ed8b3a;
+    color:white;
+    transform:translateX(5px);
+}
+
+.sidebar .active{
+    background:#edb13a;
+    color:white;
+}*/
+
+/* Heading */
+h1{
+    color:white;
+    margin-bottom:30px;
+}
+
+
+/* Search and Select */
+.form-control,
+.form-select{
+    background:#1E293B;
+   border: 1px solid #00bfff;
+    box-shadow: 0 0 15px #00cfff;
+    color:white;
+}
+
+.form-control::placeholder{
+    color:#9ca3af;
+}
+
+
+
+/* Button */
+.btn-primary{
+    background:#2046ef;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#185dac;
+}
+
+/* Employee Cards */
+.employee-card{
+    background:rgba(20,30,55,0.85);
+    border: 1px solid #00bfff;
+    border-radius:20px;
+    padding:20px;
+    color:white;
+    box-shadow: 0 0 15px #00cfff;
+    transition:0.3s;
+}
+
+.employee-card:hover{
+    transform:translateY(-8px);
+    box-shadow:   0 0 35px #00c6ff;
+}
+
+.employee-card img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:auto;
+    border:3px solid #3998e6;
+    box-shadow: 0 0 15px #00cfff;
+}
+
+.employee-card h5{
+    margin-top:20px;
+    color:white;
+}
+
+.employee-card p{
+    color:#cbd5e1;
+}
+
+/* Profile Card */
+#profileSection .card{
+    background:rgba(20,40,80,0.5);
+    border: 2px solid #00cfff;
+    border-radius: 20px;
+    color:white;
+     box-shadow: 0 0 15px #00cfff;
+    backdrop-filter:blur(15px);
+   
+}
+
+/*profile img */
+#profileSection img {
+    border: 3px solid #00cfff;
+    box-shadow: 0 0 15px #00cfff;
+
+}
+
+/*name*/
+#profileSection h3{
+    color: white;
+    font-weight: bold;
+}
+
+/*department & email*/
+#profileSection p{
+    color: #d6f4ff;
+    font-size: 18px;
+}
+
+
+
+
+
+/* Modal */
+.modal-content{
+    background:#1E293B;
+    color:white;
+}
+
+
+
+
+/* Sidebar */
+.sidebar{
+    width:280px;
+    background:#081225;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 0 30px rgba(0,150,255,.2);
+}
+
+.sidebar h2{
+    color:white;
+    margin-bottom:50px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    padding:18px;
+    margin-bottom:20px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar li:hover,
+.sidebar .active{
+    background:linear-gradient(
+        90deg,
+        #0c488c,
+        #0da8d3
+    );
+
+    box-shadow:0 0 20px #357a8d;
+}
+
+/* Main Section */
+.content{
+    flex:1;
+    margin-left:30px;
+    background:#081225;
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 0 30px rgba(0,150,255,.2);
+}
+
+.content h1{
+    font-size:55px;
+    margin-bottom:30px;
+}
+
+/* Search Box */
+.search-box{
+    background:#102040;
+    border:2px solid #00c6ff;
+    color:rgb(139, 135, 199);
+    padding:15px;
+    border-radius:15px;
+}
+
+.search-box::placeholder{
+    color:#4eb5f4;
+}
+
+
+
+
+
+
+
+
+
+
+
+#searchSection{
+    background:#0a1f5e;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 8px 30px rgba(29, 184, 109, 0.15);
+}
+
+
+
+
+#searchSection h1{
+    color:#111827;
+    font-size:55px;
+    font-weight:bold;
+}
+
+
+
+#searchSection input{
+    background:#1e2b45;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:15px;
+}
+
+#searchSection input::placeholder{
+    color:#01070c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add new  Employee Form Style */
+
+#employeeForm{
+
+    display: none;
+    width: 400px;
+    margin: 20px auto;
+    padding: 35px;
+
+    background: rgba(20,30,55,0.90);
+
+    border: 2px solid #37b6ff;
+    border-radius: 25px;
+
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.975);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* Form Input Style */
+
+#employeeForm input{
+
+    background: rgba(255,255,255,0.05);
+
+    border: 2px solid #37b6ff;
+
+    color: white;
+
+    border-radius: 15px;
+     box-shadow: 0 0 10px rgba(0, 191, 255, 0.975);
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Placeholder Color */
+
+#employeeForm input::placeholder{
+
+    color: rgba(209, 216, 243, 0.89);
+}
+
+
+/* Confirm Button Style */
+
+#employeeForm button{
+
+    width: 120px;
+
+    border-radius: 25px;
+     box-shadow: 0 0 20px rgba(0, 191, 255, 0.975);
+
+
+    border: 1px solid #37b6ff;
+
+    font-weight: bold;
+
+    display: block;
+
+    margin: auto;
+}
+
+
+/*profile edit & logout btn*/
+
+.profile-btn{
+
+    background: #00d9ff;
+    border: none;
+
+    color: white;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #00d9ff;
+
+}
+
+.profile-btn:hover{
+
+    background: #00b8d4;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #00d9ff;
+
+}
+
+/*logout btn*/
+
+.logout-btn{
+
+    background: #ec1a1a;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #f11e1e;
+
+}
+
+.logout-btn:hover{
+
+    background: #d63031;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 25px #ff4d4d;
+
+}
+
+
+/*Icons*/
+
+
+.profile-btn i,
+.logout-btn i{
+
+    margin-right: 8px;
+
+}
+
+/* mobile*/
+
+@media(max-width: 576px){
+
+    .d-flex{
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .profile-btn,
+    .logout-btn{
+
+        width: 220px;
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   Edit Profile Modal
+========================== */
+
+.modal-content{
+
+    background:#10192d;
+    border:2px solid #37b6ff;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(55,182,255,.4);
+
+}
+
+.modal-title{
+
+    color:#37b6ff;
+    font-weight:bold;
+
+}
+
+.modal-body label{
+
+    color:#8fdcff;
+    font-weight:600;
+
+}
+
+.modal-body input{
+
+    background:#17233d;
+    border:2px solid #37b6ff;
+    color:white;
+    border-radius:12px;
+
+}
+
+.modal-body input:focus{
+
+    background:#17233d;
+    color:white;
+    border-color:#00e5ff;
+    box-shadow:0 0 15px #00e5ff;
+
+}
+
+.profile-btn{
+
+    background:#00bcd4;
+    border:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.profile-btn:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 0 20px cyan;
+
+}
+
+.logout-btn{
+
+    background:#ff4d4d;
+    color:white;
+    border:none;
+    font-weight:bold;
+
+}
+
+.logout-btn:hover{
+
+    box-shadow:0 0 20px red;
+
+}
+
+
+
+
+
+
+
+
+
+/*Responsive Design*/
+
+/* Tablet */
+@media (max-width: 992px){
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+        margin-bottom:20px;
+    }
+
+    .content{
+        margin-left:0;
+        padding:20px;
+    }
+
+    .content h1{
+        font-size:38px;
+    }
+
+    #employeeForm{
+        width:90%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .dashboard{
+        padding:15px;
+    }
+
+    .sidebar{
+        width:100%;
+        padding:20px;
+        border-radius:15px;
+        min-height:auto;
+    }
+
+    .content{
+        margin-left:0;
+        padding:15px;
+        border-radius:15px;
+    }
+
+    .content h1,
+    #searchSection h1{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .employee-card{
+        padding:15px;
+    }
+
+    .employee-card img{
+        width:80px;
+        height:80px;
+    }
+
+    #employeeForm{
+        width:95%;
+        padding:20px;
+    }
+
+    .search-box,
+    .form-control,
+    .form-select,
+    button{
+        width:100%;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+    h1,
+    .content h1,
+    #searchSection h1{
+        font-size:24px;
+    }
+
+    .sidebar h2,
+    .sidebar h4{
+        font-size:22px;
+        text-align:center;
+    }
+
+    .sidebar li{
+        font-size:16px;
+        padding:12px;
+    }
+
+    .employee-card{
+        padding:12px;
+    }
+
+    .employee-card img{
+        width:70px;
+        height:70px;
+    }
+
+    #employeeForm{
+        width:100%;
+        padding:15px;
+    }
+
+    .profile-btn,
+    .logout-btn{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+}

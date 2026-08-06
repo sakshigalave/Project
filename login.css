@@ -1,0 +1,252 @@
+   GOOGLE FONT{
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+   }
+   RESET
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+  /* BODY
+ */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+linear-gradient(rgba(5,15,35,.55),rgba(5,15,35,.55)),
+url("images/bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+/*LOGIN CONTAINER */
+
+.login-container{
+    width:420px;
+    padding:50px;
+
+    background:rgba(12, 35, 77, 0.10);
+
+   
+
+    border:1px solid rgba(11, 127, 243, 0.79);
+    border-radius:30px;
+
+   
+}
+
+/*TITLE */
+
+.login-box h2{
+
+    color:#fff;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:32px;
+
+    font-weight:600;
+
+}
+
+/* INPUT BOX*/
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    padding:12px 15px;
+
+    border-radius:8px;
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(9, 82, 228, 0.15);
+
+}
+/* ICONS*/
+
+.input-box i{
+
+   
+    color:#38BDF8;
+
+    font-size:16px;
+
+    margin-right:10px;
+}
+
+/*INPUT*/
+
+.input-box input{
+
+    flex:10;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:#f7f2f2;
+
+    font-size:15px;
+
+}
+
+/*PLACEHOLDER*/
+
+.input-box input::placeholder{
+
+    color:#cfcfcf;
+
+}
+
+/* EYE ICON */
+
+.eye{
+
+    cursor:pointer;
+
+    color:#38BDF8;
+
+    margin-left:10px;
+
+}
+
+/* REMEMBER ME */
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:20px 0;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+.remember input{
+
+    width:16px;
+
+    height:16px;
+
+       accent-color:#38BDF8;
+
+}
+
+/* LOGIN BUTTON */
+
+button{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:linear-gradient(90deg,#38BDF8,#1E3A8A);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+/*BUTTON HOVER*/
+
+button:hover{
+
+     transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(26, 161, 219, 0.45);
+
+}
+
+/*
+   INPUT HOVER
+ */
+
+.input-box:hover{
+
+    border-color:#38BDF8;
+
+}
+
+/* 
+   INPUT FOCUS
+*/
+.input-box:focus-within{
+
+    border-color:#38BDF8;
+
+    box-shadow:0 0 10px rgba(8, 165, 233, 0.35);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:480px){
+
+    .login-box{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+    .login-box h2{
+
+        font-size:28px;
+
+    }
+
+    button{
+
+        height:48px;
+
+    }
+
+}
